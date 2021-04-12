@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Atividade Quiz SISVAN</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/main.min.css" />
+</head>
+
+<body>
+  <nav class="">
+    <div class="container mainHeader">
+      <div class="ml-5 d-flex flex-column align-content-center text-white">
+        <center>
+          <h3 class="mt-5">
+            INFORMÁTICA EM SAÚDE - SISVAN - Bolsa Família <br />Atividade Quiz
+            - Unidade 2
+          </h3>
+        </center>
+      </div>
+    </div>
+  </nav>
+  <section class="mainPanel px-3 mb-0">
+    <div>
+      <div class="ml-5 d-flex">
+        <center>
+          <h5 class="panel-title bold">
+            Associe as informações das colunas abaixo, arrastando o número até
+            a resposta correspondente:
+          </h5>
+        </center>
+      </div>
+      <hr class="h-line" />
+
+    </div>
+    <section class="ml-4 mt-3  mb-0 pt-0 pb-0  d-flex flex-wrap">
+
+     
+      
+
+      <section class="titulos col-md-3 pt-4 mt-4  mb-0">
+        <div class="title-card " draggable="true" name="01">
+          <span> 1) Sistema de Vigilância Alimentar E Nutricional </span>
+        </div>
+        <div class="title-card" draggable="true" name="02">
+          <span>
+            2) Acesso a gestores e técnicos em alimentação e nutrição
+            (estadual ou municipal)
+          </span>
+        </div>
+        <div class="title-card" draggable="true" name="03">
+          <span>
+            3) Estado Nutricional, Consumo Alimentar, ANDI (Acompanhamento
+            Nutricional)
+          </span>
+        </div>
+        <div class="title-card" draggable="true" name="04">
+          <span>
+            4) Consumo alimentar a partir de 2015 – aleitamento materno
+            exclusivo em menores de 6 meses.
+          </span>
+        </div>
+        <div class="title-card" draggable="true" name="05">
+          <span>
+            5) Relatório por faixa etária – 0 a 5 meses e 29 dias; 6 a 11
+            meses e 29 dias; 12 a 23 meses e 29 dias; 24 a 35 meses e 29 dias;
+            36 a 47 meses e 29 dias; 48 a 59 meses e 29 dias; total menores de
+            5 anos.
+          </span>
+        </div>
+      </section>
+
+
+
+      <!-- <div class="v-line"></div> -->
+
+
+      <section class="conteudos d-flex flex-wrap justify-content-between col-md-8">
+
+        <div class="card-conteudo ml-2 mr-2 mb-4 mt-0 col-12">
+          <table>
+            <td class="col1">
+              <span> ANDI – Atenção Nutricional à Desnutrição Infantil </span>
+            </td>
+
+            <td class="col2">
+              <div class="empty" name="05">
+                <span id="tip03">Arraste aqui</span>
+              </div>
+            </td>
+          </table>
+        </div>
+
+
+        <div class="card-conteudo ml-2 mr-2 mb-4 col-12">
+          <table>
+            <td class="col1">
+              <span> SISVAN </span>
+            </td>
+            <td class="col2">
+              <div class="empty" name="01">
+                <span id="tip01" class="">Arraste aqui</span>
+              </div>
+            </td>
+          </table>
+
+        </div>
+
+
+
+        <div class="card-conteudo ml-2 mr-2 mb-4 mt-2 col-12">
+          <table>
+            <td class="col1">
+              <span> Relatórios de acesso público </span>
+            </td>
+            <td class="col2">
+              <div class="empty" name="03">
+                <span id="tip07">Arraste aqui</span>
+              </div>
+            </td>
+          </table>
+        </div>
+
+
+
+        <div class="card-conteudo ml-2 mr-2 mb-4 mt-2 col-12">
+          <table>
+            <td class="col1">
+              <span> Menores de 6 meses </span>
+            </td>
+            <td class="col2">
+              <div class="empty" name="04">
+                <span id="tip08">Arraste aqui</span>
+              </div>
+            </td>
+          </table>
+        </div>
+
+
+
+        <div class="card-conteudo ml-2 mr-2 mb-4 mt-2 col-12">
+          <table>
+            <td class="col1">
+              <span> Acesso restrito - SISVAN </span>
+            </td>
+            <td class="col2">
+              <div class="empty" name="02">
+                <span id="tip08">Arraste aqui</span>
+              </div>
+            </td>
+          </table>
+        </div>
+
+        <div class="ml-5 score-panel">
+
+          <span class="ncards-panel">Respostas:<span class="ml-2" id="number-card">5</span>/5</span>
+          
+        </div>
+        
+
+
+
+
+
+      </section>
+    </section>
+  
+    <footer id="footer" class="container">
+      <img src="logos/logo-lais.png" alt="LAIS">
+      <img src="logos/logo-sedis.png" alt="SEDIS">
+      <img id="ufrn" src="logos/ufrn.png" alt="UFRN">
+  
+  
+    </footer>
+    
+  </section>
+
+  
+
+  <div class="modal" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <h5 class="modal-title mb-1 pt-1">
+            <center> PARABÉNS!
+          </h5>
+          </center>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" onclick="close();" id="close">
+            <span aria-hidden="false">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-footer">
+          <h6 class="modal-title">Você fez a associação correta e mostrou que
+            conhece algumas das principais potencialidades do SISVAN!</h6>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-2" role="dialog" id="myModal-again">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Quase lá!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" onclick="close_again();"
+            id="close-again">
+            <span aria-hidden="false">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-footer">
+          <h6>Você ainda não acertou todas. Tente novamente.</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="js/jquery/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+  document.getElementById("close").onclick = close;
+  document.getElementById("close1").onclick = close;
+  function close() {
+    const modal = document.querySelector("#myModal");
+    modal.remove("show");
+    modal.setAttribute("aria-hidden", "true");
+    modal.setAttribute("style", "display: none");
+    location.reload();
+  }
+  document.getElementById("close-again").onclick = close_again;
+  document.getElementById("close1-again").onclick = close_again;
+  function close_again() {
+    const modal = document.querySelector("#myModal-again");
+    modal.className = "modal";
+    modal.setAttribute("aria-hidden", "true");
+    modal.setAttribute("style", "display: none");
+  }
+</script>
+
+</html>
