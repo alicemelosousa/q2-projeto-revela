@@ -1,4 +1,5 @@
 window.onload = () => {
+  
   const conteudos = document.querySelectorAll(".empty");
   const titulos = document.querySelectorAll(".title-card");
   const panel_titulo = document.querySelector(".titulos");
@@ -33,6 +34,7 @@ window.onload = () => {
 
   function dragEnd() {
     this.className = "title-card";
+    
   }
 
   function dragOver(e) {
@@ -51,12 +53,15 @@ window.onload = () => {
   }
 
   function dragDrop() {
+   
     countCards();
-    if (this.childNodes.length < 4) {
+    if (this.childNodes.length < 7) {
+      
       this.id = "removeSpan";
       this.className = "";
       this.append(currentDOM);
       checkConteudos();
+
     }
     setTimeout(() => {
       if (
@@ -68,10 +73,11 @@ window.onload = () => {
         modal.setAttribute("aria-hidden", "false");
         modal.setAttribute("style", "display: flex");
       } else if (checarResp()) {
+       
         isComplete();
       }
     }, 250);
-    if (document.querySelector(".titulos").childElementCount < 5) {
+    if (document.querySelector(".titulos").childElementCount < 7) {
       document.querySelector(".titulos").className += " centralize";
     }
   }
@@ -79,7 +85,7 @@ window.onload = () => {
   function corrigirPainel(wrong_cards, id_acertos) {
     if (erros.length) {
       let vazios = document.querySelectorAll("#removeSpan");
-      let cnt_acertos = 4;
+      let cnt_acertos = 7;
       wrong_cards.forEach(card => {
         document.querySelector(".titulos").prepend(card);
       });
@@ -98,7 +104,7 @@ window.onload = () => {
         .setAttribute("style", "visibility: visible");
       let n_cards = document.querySelector(".titulos").childElementCount;
       document.querySelector("#number-card").textContent = `${n_cards}`;
-      document.querySelector(".titulos").className = "titulos col-3";
+      document.querySelector(".titulos").className = "titulos col-md-6";
       erros = [];
     }
   }
@@ -109,12 +115,17 @@ window.onload = () => {
   }
 
   function checarResp() {
+    
     if (!document.querySelector(".titulos").childElementCount) {
+      
+      
+
       let alternativas = document.querySelectorAll("#removeSpan");
       let respostas = document.querySelectorAll(".title-card");
       let alt = [];
       let resp = [];
       let acertos = [];
+      
       alternativas.forEach(element => {
         alt.push(element.attributes[1].value);
       });
@@ -123,9 +134,11 @@ window.onload = () => {
       });
       for (let index = 0; index < resp.length; index++) {
         setTimeout(() => {
+          
           if (resp[index] != alt[index]) {
             erros.push(respostas[index]);
             respostas[index].remove();
+            
           } else if (resp[index] == alt[index]) {
             acertos.push(alternativas[index].attributes[1].value);
           }
@@ -135,12 +148,15 @@ window.onload = () => {
         setTimeout(() => corrigirPainel(erros, acertos)), 300;
       }
       return alt.toString() == resp.toString();
+
     } else {
+      
       return false;
     }
   }
   //Verifica se o usuário ganhou o jogo
   function isComplete() {
+    
     setTimeout(() => {
       let titulos = document.querySelectorAll(".title-card");
       titulos.forEach(element => {
@@ -154,18 +170,24 @@ window.onload = () => {
   }
 
   function checkConteudos() {
+    
     conteudos.forEach(conteudo => {
-      if (!conteudo.className && !conteudo.childNodes[3]) {
+     
+      if (!conteudo.className && !conteudo.childNodes[0]) {
+    
         conteudo.className = "empty";
         conteudo.id = "";
+       
       }
+
+     
     });
   }
 
   //Funcoes de eventos painel de titulos
   function dragOver_Panel(e) {
     e.preventDefault();
-    if (this.className === "titulos col-3") {
+    if (this.className === "titulos col-md-6") {
       this.className += " hoverTitulos";
     }
   }
@@ -174,7 +196,7 @@ window.onload = () => {
     e.preventDefault();
   }
   function dragLeave_Panel() {
-    this.className = "titulos col-3";
+    this.className = "titulos col-md-6";
     if (document.querySelector(".titulos").childElementCount < 5) {
       document.querySelector(".titulos").className += " centralize";
     }
@@ -183,7 +205,7 @@ window.onload = () => {
     if (document.querySelector(".titulos").childElementCount < 4) {
       document.querySelector(".titulos").className += " centralize";
     } else {
-      this.className = "titulos col-3";
+      this.className = "titulos col-md-6";
     }
     this.prepend(currentDOM);
     checkConteudos();
